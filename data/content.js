@@ -70,9 +70,20 @@ export const ASSIGNMENTS = [
 ];
 
 export const VIDEOS = [
-  { title: "Limits & Derivatives, Made Easy", duration: "12:40", img: "video-limits" },
-  { title: "Cracking Integration by Parts", duration: "9:15", img: "video-integration" },
-  { title: "Vectors & 3D Geometry, Visualised", duration: "15:02", img: "video-vectors" },
+  {
+  title: "Student solving a difficult problem",
+  duration: "3:16",
+  video:
+    "https://res.cloudinary.com/wpggbe6g/video/upload/f_mp4,vc_h264,q_auto/WhatsApp_Video_2026-08-25_at_1.11.01_AM.mp4",
+},
+{
+  title: "Student solving a difficult  problem",
+  duration: "5:27",
+  video:
+    "https://res.cloudinary.com/wpggbe6g/video/upload/v1787601945/WhatsApp_Video_2026-08-25_at_1.10.44_AM.mp4",
+},
+
+ 
 ];
 
 export const FEEDBACK = [
