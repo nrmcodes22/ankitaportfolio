@@ -73,14 +73,7 @@ ${message}`;
               className="px-4 py-3 rounded-md bg-[var(--paper)] border border-[var(--paper-line)] focus:outline-none focus:border-[var(--moss-deep)] text-sm"
             />
 
-            <input
-              type="email"
-              placeholder="Email address"
-              value={email}
-              onChange={(e) => setEmail(e.target.value)}
-              required
-              className="px-4 py-3 rounded-md bg-[var(--paper)] border border-[var(--paper-line)] focus:outline-none focus:border-[var(--moss-deep)] text-sm"
-            />
+           
 
             <textarea
               placeholder="What would you like help with?"
