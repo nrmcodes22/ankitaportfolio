@@ -4,7 +4,7 @@ import { VIDEOS } from "../../data/content";
 
 export default function Videos() {
   return (
-    <section className="max-w-6xl mx-auto px-5 sm:px-8 py-16 sm:py-24">
+    <section className="mx-auto px-8 md:px-12 lg:px-20 py-16 sm:py-24">
       <Reveal>
         <span className="hand text-2xl text-[var(--moss-deep)]">
   Learning in action

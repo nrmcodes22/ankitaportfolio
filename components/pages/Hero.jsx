@@ -91,10 +91,10 @@ export default function Hero() {
     </Reveal>
 
     <Reveal delay={240}>
-      <div className="mt-8 flex flex-wrap gap-3 sm:gap-4">
+      <div className="mt-8 flex flex-wrap gap-1 md:gap-4">
         <Link
           href="#mywork"
-          className="btn-primary px-6 py-3 rounded-full font-medium text-sm sm:text-base inline-flex items-center gap-2"
+          className="btn-primary px-4 md:px-6 py-3 rounded-full font-medium text-sm sm:text-base inline-flex items-center gap-1 md:gap-2"
         >
           See my work
           <ArrowUpRight size={16} />
@@ -102,7 +102,7 @@ export default function Hero() {
 
         <Link
           href="#contact"
-          className="btn-ghost px-6 py-3 rounded-full font-medium text-sm sm:text-base"
+          className="btn-ghost px-4 md:px-6 py-3 rounded-full font-medium text-sm sm:text-base"
         >
           Get in touch
         </Link>
@@ -191,18 +191,7 @@ export default function Hero() {
           </p>
 
 
-          <div className="mt-8 flex flex-wrap gap-3">
-
-            {VISION.values.map((v) => (
-              <span
-                key={v}
-                className="px-4 py-2 rounded-full border border-[var(--paper-line)] bg-[var(--paper-card)] text-sm font-medium text-[var(--moss-deep)]"
-              >
-                {v}
-              </span>
-            ))}
-
-          </div>
+          
 
         </Reveal>
 

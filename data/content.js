@@ -76,9 +76,13 @@ export const VIDEOS = [
 ];
 
 export const FEEDBACK = [
-  { quote: "Calculus used to scare her. Now she attempts the toughest problems first.", name: "Priya S.", role: "Parent, Class 12", rating: 5 },
-  { quote: "Patient, structured, and never makes you feel behind before boards or JEE prep.", name: "Rohan M.", role: "Parent, Class 11", rating: 5 },
-  { quote: "The way concepts are broken down finally made trigonometry click for me.", name: "Ananya K.", role: "Student, Class 12", rating: 5 },
+  
+  { quote: "My math teacher makes learning enjoyable and easy to understand. They explain concepts clearly, answer questions patiently, and always encourage us to do our best. Their support has helped me become more confident in mathematics.", name: "Pratik Panda", role: "Student, Class 11", rating: 5 },
+  { quote: "Ankita Ma'am explains concepts in a very simple and effective way. Her regular tests and doubt-solving sessions helped me improve both my understanding and confidence. I genuinely enjoyed learning in her classes and would highly recommend them to other students.", name: "Yash", role: "Student, Class 11", rating: 5 },
+  { quote: `One of the best teacher/mentor i came across so far in my career as a student. I would proudly reccomend each and everyone to attend her classes if they are really interested in having a good investment in concept clarification, confidence boosting and having a bright future. One of the sweetest and most understanding tutor/mentor so far. `, name: "Subrat Kumar Malla", role: "Student, Class 12", rating: 5 },
+{ quote: `When I felt completely overwhelmed by the sheer volume of the JEE Mathematics syllabus—specifically in Calculus—her patient, step-by-step guidance turned my frustration into clarity. She fosters a supportive environment where no question is too small, and their dedication to my success has been instrumental in my growth. Any student would be lucky to have her as an instructor.`, name: "Nishi Singh", role: "Student, Class 12", rating: 5 },
+{ quote: `The instructor created an engaging and supportive learning environment that made complex concepts easy to understand. Their clear explanations, patience, and enthusiasm encouraged active participation and deeper learning. I greatly benefited from their teaching and would highly recommend their classes to other students.`, name: "Muktikanta Behera", role: "Student, Class 11", rating: 5 },
+
 ];
 
 export const CONTACT = {
