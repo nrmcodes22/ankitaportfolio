@@ -32,7 +32,7 @@ export const NAV_LINKS = [
   
   {
     path: "#videos",
-    label: "Sample Videos",
+    label: "My Students",
     section: "videos",
   },
   {
@@ -88,6 +88,6 @@ export const FEEDBACK = [
 export const CONTACT = {
   eyebrow: "Let's talk",
   heading: "Ready to start? Send a note.",
-  body: "Tell me which class and subject your child needs help with — I'll get back within a day.",
+  body: "Tell me which class your child needs help with — I'll get back within a day.",
   location: "Based in Rourkela · Class 11–12 Mathematics · online & in-person",
 };
