@@ -5,7 +5,7 @@ import Videos from "./Videos";
 import Feedback from "./Feedback";
 import Contact from "./Contact";
 
-
+import Mywork from "./mywork";
 export default function Home() {
   return (
     <>
@@ -13,13 +13,11 @@ export default function Home() {
 
      
 
-      <section id="test-papers">
-  <TestPapers />
+      <section id="mywork">
+  <Mywork />
 </section>
 
-<section id="assignments">
-  <Assignments />
-</section>
+
 
 <section id="videos">
   <Videos />

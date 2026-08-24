@@ -1,11 +1,22 @@
 export const PROFILE = {
-  name: "Aanya Verma",
+  name: "Ankita Panigrahi",
   tagline: "Mathematics educator for Class 11 & 12",
+
   heroGreeting: "Hi, I'm",
-  heroHeadline: ["Aanya Verma —", "Mathematics", "made clear."],
-  heroSubtext:
-    "Mathematics educator for Class 11 & 12 — board exams and JEE/NEET foundations. I turn tangled problem sets into papers students are proud to hand in, one graded page at a time.",
+
+  heroHeadline: ["Ankita Panigrahi"],
+
+  heroSubtextStart:
+    "I hold an ",
+
+  heroSubtextHighlight:
+    "Integrated M.Sc. in Mathematics from NIT Rourkela, with over three years of teaching experience",
+
+  heroSubtextEnd:
+    ". I have taught Mathematics to students from Classes 8–12, including JEE-level preparation. My experience includes mentoring students with diverse academic backgrounds and learning needs. I focus on building strong mathematical foundations through structured and concept-driven teaching.",
+
   badgeLines: ["10+ yrs", "teaching"],
+
   heroPhoto: "https://picsum.photos/seed/mathteacher-writing/400/520",
   heroPortrait: "https://picsum.photos/seed/mathteacher-portrait/380/460",
   heroPhoto3: "https://picsum.photos/seed/math-students/400/520",
@@ -14,15 +25,11 @@ export const PROFILE = {
 export const NAV_LINKS = [
   
   {
-    path: "#test-papers",
-    label: "Test Papers",
-    section: "test-papers",
+    path: "#mywork",
+    label: "My Work",
+    section: "my-work",
   },
-  {
-    path: "#assignments",
-    label: "Assignments",
-    section: "assignments",
-  },
+  
   {
     path: "#videos",
     label: "Sample Videos",
@@ -43,9 +50,9 @@ export const NAV_LINKS = [
 export const VISION = {
   eyebrow: "My vision",
   heading: "Every Class 11–12 student can love the subject they think they hate.",
-  body: "I believe confidence comes before speed, and understanding comes before memorising. Lessons are built around real worked examples, honest feedback, and enough patience for a concept to sink in — whether it's for board exams or competitive exam prep.",
+  body: "I believe a good tutor must first understand a student before expecting the student to understand the subject. My approach is rooted in empathy, patience, and conceptual clarity, creating a learning environment where students feel comfortable asking questions, making mistakes, and growing with confidence.",
   values: ["Patience", "Clarity", "Curiosity"],
-  image: "https://picsum.photos/seed/mathclassroom/500/620",
+  image: "images/vision.jpeg",
 };
 
 export const TEST_PAPERS = [
@@ -78,5 +85,5 @@ export const CONTACT = {
   eyebrow: "Let's talk",
   heading: "Ready to start? Send a note.",
   body: "Tell me which class and subject your child needs help with — I'll get back within a day.",
-  location: "Based in Bhubaneswar · Class 11–12 Mathematics · online & in-person",
+  location: "Based in Rourkela · Class 11–12 Mathematics · online & in-person",
 };

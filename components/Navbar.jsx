@@ -22,11 +22,22 @@ export default function Navbar() {
 
   return (
     <nav className={`cozy-nav ${scrolled ? "scrolled" : ""}`}>
-      <div className="max-w-6xl mx-auto flex items-center justify-between px-5 sm:px-8 py-4">
-        <Link href="/" className="display text-lg sm:text-xl font-semibold text-[var(--ink)]">
-          {PROFILE.name}
-          <span className="hand text-[var(--moss-deep)] text-2xl ml-1">.</span>
-        </Link>
+      <div className="mx-auto flex items-center justify-between px-8 md:px-12 lg:px-20 py-4">
+        <Link
+  href="/"
+  className="flex items-center gap-2"
+>
+  <img
+    src="/images/logo.png"
+    alt="Logo"
+    className="w-9 h-9 sm:w-10 sm:h-10 object-contain"
+  />
+
+  <span className="display text-lg sm:text-xl font-semibold text-[var(--ink)]">
+    {PROFILE.name}
+    
+  </span>
+</Link>
 
         <div className="hidden md:flex items-center gap-7">
           {NAV_LINKS.map((l) => (

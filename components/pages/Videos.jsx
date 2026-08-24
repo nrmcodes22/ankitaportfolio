@@ -6,8 +6,13 @@ export default function Videos() {
   return (
     <section className="max-w-6xl mx-auto px-5 sm:px-8 py-16 sm:py-24">
       <Reveal>
-        <span className="hand text-2xl text-[var(--moss-deep)]">Watch a lesson</span>
-        <h2 className="display text-3xl sm:text-4xl font-semibold mt-2">Sample videos</h2>
+        <span className="hand text-2xl text-[var(--moss-deep)]">
+  Learning in action
+</span>
+
+<h2 className="display text-3xl sm:text-4xl font-semibold mt-2">
+  See my students solve
+</h2>
       </Reveal>
 
       <div className="grid sm:grid-cols-3 gap-6 mt-10">
