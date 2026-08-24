@@ -36,7 +36,17 @@ export default function Feedback() {
   }, [mobilePaused]);
 
   /* =====================================================
-     MOBILE RESET AFTER DUPLICATE SLIDE
+     MOBILE POSITION CHANGE
+     
+     Every time the mobile tab/slide changes:
+     RESET Read More.
+  ===================================================== */
+  useEffect(() => {
+    setMobileExpanded(false);
+  }, [mobileIndex]);
+
+  /* =====================================================
+     MOBILE INFINITE RESET
   ===================================================== */
   useEffect(() => {
     if (mobileIndex === FEEDBACK.length) {
@@ -89,6 +99,9 @@ export default function Feedback() {
       setMobileExpanded(true);
       setMobilePaused(true);
 
+      /*
+       * Keep the feedback open for 3 seconds.
+       */
       setTimeout(() => {
         setMobilePaused(false);
       }, 3000);
@@ -117,7 +130,17 @@ export default function Feedback() {
   }, [desktopPaused]);
 
   /* =====================================================
-     DESKTOP / TABLET RESET
+     DESKTOP POSITION CHANGE
+     
+     Every time desktop/tablet position changes:
+     RESET ALL Read More states.
+  ===================================================== */
+  useEffect(() => {
+    setDesktopExpanded({});
+  }, [desktopIndex]);
+
+  /* =====================================================
+     DESKTOP INFINITE RESET
   ===================================================== */
   useEffect(() => {
     if (desktopIndex >= FEEDBACK.length) {
@@ -133,7 +156,7 @@ export default function Feedback() {
   }, [desktopIndex]);
 
   /* =====================================================
-     DESKTOP / TABLET NEXT
+     DESKTOP NEXT
   ===================================================== */
   const desktopNext = () => {
     setDesktopExpanded({});
@@ -150,7 +173,7 @@ export default function Feedback() {
   };
 
   /* =====================================================
-     DESKTOP / TABLET PREVIOUS
+     DESKTOP PREVIOUS
   ===================================================== */
   const desktopPrevious = () => {
     setDesktopExpanded({});
@@ -167,7 +190,7 @@ export default function Feedback() {
   };
 
   /* =====================================================
-     DESKTOP / TABLET READ MORE
+     DESKTOP READ MORE
   ===================================================== */
   const desktopReadMore = (index) => {
     const currentlyExpanded = desktopExpanded[index];
@@ -180,6 +203,9 @@ export default function Feedback() {
     if (!currentlyExpanded) {
       setDesktopPaused(true);
 
+      /*
+       * Keep the feedback open for 3 seconds.
+       */
       setTimeout(() => {
         setDesktopPaused(false);
       }, 3000);
@@ -188,9 +214,6 @@ export default function Feedback() {
 
   /* =====================================================
      DESKTOP / TABLET SLIDES
-
-     Duplicate first 3 cards so the carousel
-     can move smoothly.
   ===================================================== */
   const desktopSlides = [
     ...FEEDBACK,
@@ -217,7 +240,6 @@ export default function Feedback() {
 
       {/* =================================================
           MOBILE VERSION
-          Visible only below md
       ================================================= */}
       <div className="block md:hidden">
 
@@ -257,6 +279,7 @@ export default function Feedback() {
 
                       {/* Stars */}
                       <div className="flex gap-0.5 mb-5">
+
                         {Array.from({
                           length: feedback.rating,
                         }).map((_, idx) => (
@@ -269,6 +292,7 @@ export default function Feedback() {
                           />
 
                         ))}
+
                       </div>
 
 
@@ -278,8 +302,8 @@ export default function Feedback() {
                         <p
                           className={`
                             hand
-                            text-2xl
-                            sm:text-3xl
+                            text-lg
+                            md:text-2xl
                             leading-snug
                             text-[var(--ink)]
                             ${
@@ -295,6 +319,7 @@ export default function Feedback() {
 
                         {/* Read More */}
                         {feedback.quote.length > 180 && (
+
                           <button
                             onClick={mobileReadMore}
                             className="
@@ -309,6 +334,7 @@ export default function Feedback() {
                               ? "Read less"
                               : "Read more"}
                           </button>
+
                         )}
 
                       </div>
@@ -338,7 +364,7 @@ export default function Feedback() {
             </div>
 
 
-            {/* Mobile Previous */}
+            {/* Previous */}
             <button
               onClick={mobilePrevious}
               aria-label="Previous feedback"
@@ -367,7 +393,7 @@ export default function Feedback() {
             </button>
 
 
-            {/* Mobile Next */}
+            {/* Next */}
             <button
               onClick={mobileNext}
               aria-label="Next feedback"
@@ -400,7 +426,7 @@ export default function Feedback() {
         </Reveal>
 
 
-        {/* Mobile Dots */}
+        {/* Mobile dots */}
         <div className="flex justify-center gap-2 mt-8">
 
           {FEEDBACK.map((_, index) => (
@@ -436,7 +462,6 @@ export default function Feedback() {
 
       {/* =================================================
           TABLET + DESKTOP VERSION
-          Visible md and above
       ================================================= */}
       <div className="hidden md:block">
 
@@ -506,16 +531,21 @@ export default function Feedback() {
                     >
 
                       <div
-                        className="
-                          fold-card
-                          p-7
-                          lg:p-8
-                          h-[360px]
-                          lg:h-[370px]
-                          flex
-                          flex-col
-                        "
-                      >
+  className={`
+    fold-card
+    p-7
+    lg:p-8
+    flex
+    flex-col
+    transition-all
+    duration-300
+    ${
+      isExpanded
+        ? "min-h-[360px] lg:min-h-[370px]"
+        : "h-[360px] lg:h-[370px]"
+    }
+  `}
+>
 
                         {/* Stars */}
                         <div className="flex gap-0.5 mb-5 shrink-0">
@@ -643,7 +673,7 @@ export default function Feedback() {
         </Reveal>
 
 
-        {/* Desktop / Tablet Dots */}
+        {/* Desktop / Tablet dots */}
         <div className="flex justify-center gap-2 mt-8">
 
           {FEEDBACK.map((_, index) => (
