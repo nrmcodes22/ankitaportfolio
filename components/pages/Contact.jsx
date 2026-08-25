@@ -22,7 +22,7 @@ export default function Contact() {
 I found your teaching portfolio and would like to get in touch.
 
 Name: ${name}
-Email: ${email}
+
 
 Message:
 ${message}`;
